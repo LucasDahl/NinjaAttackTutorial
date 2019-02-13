@@ -22,8 +22,8 @@ class GameViewController: UIViewController {
         let skView = view as! SKView
         
         // Shpws the FPS and node count
-        skView.showsFPS = true
-        skView.showsNodeCount = true
+        //skView.showsFPS = true
+        //skView.showsNodeCount = true
         
         // Ignore other siblings
         skView.ignoresSiblingOrder = true
