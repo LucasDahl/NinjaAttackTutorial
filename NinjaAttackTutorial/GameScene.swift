@@ -193,7 +193,7 @@ class GameScene: SKScene {
         // Add one to the number of monsters destroyed for each hit
         monsterDestroyed += 1
         
-        if monsterDestroyed > 30 {
+        if monsterDestroyed >= 30 {
             
             // Once the player gets to 30 flip the scene to the GameOverScene
             let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
