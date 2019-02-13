@@ -50,6 +50,7 @@ class GameScene: SKScene {
     
     let player = SKSpriteNode(imageNamed: "player")
     var monsterDestroyed = 0
+    //TODO - add a label to track score and misses
     
     //=========================
     // MARK: - didMove
