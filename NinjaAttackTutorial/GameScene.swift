@@ -68,7 +68,7 @@ class GameScene: SKScene {
         // Add a new monster every second
         run(SKAction.repeatForever(SKAction.sequence([SKAction.run(addMonster), SKAction.wait(forDuration: 1.0)])))
         
-        // Setup the physics - Needs to not have physics for this game.
+        // Setup the physics - Needs to not have physics for this game
         physicsWorld.gravity = .zero
         physicsWorld.contactDelegate = self
         
@@ -90,6 +90,13 @@ class GameScene: SKScene {
         
         // Create a monster Sprite
         let monster = SKSpriteNode(imageNamed: "monster")
+        
+        // Setup ip the category bitmask for the objects
+        monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size)
+        monster.physicsBody?.isDynamic = true
+        monster.physicsBody?.categoryBitMask = PhysicsCategory.monster
+        monster.physicsBody?.contactTestBitMask = PhysicsCategory.projectile
+        monster.physicsBody?.collisionBitMask = PhysicsCategory.none
         
         // Determine where to spawn the monster along the Y axis
         let actualY = random(min: monster.size.height / 2, max: size.height - monster.size.height / 2)
