@@ -15,6 +15,7 @@
 		957A7E2F22135AD9007D2DF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 957A7E2D22135AD9007D2DF2 /* LaunchScreen.storyboard */; };
 		957A7E3922135B56007D2DF2 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 957A7E3722135B56007D2DF2 /* background-music-aac.caf */; };
 		957A7E3A22135B56007D2DF2 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 957A7E3822135B56007D2DF2 /* pew-pew-lei.caf */; };
+		95E470DF2213CBC1003B5B57 /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E470DE2213CBC1003B5B57 /* PhysicsCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		957A7E3022135AD9007D2DF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		957A7E3722135B56007D2DF2 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
 		957A7E3822135B56007D2DF2 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		95E470DE2213CBC1003B5B57 /* PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				957A7E1E22135AD8007D2DF2 /* AppDelegate.swift */,
 				957A7E2422135AD8007D2DF2 /* GameScene.swift */,
 				957A7E2622135AD8007D2DF2 /* GameViewController.swift */,
+				95E470DE2213CBC1003B5B57 /* PhysicsCategory.swift */,
 				957A7E2822135AD8007D2DF2 /* Main.storyboard */,
 				957A7E2B22135AD9007D2DF2 /* Assets.xcassets */,
 				957A7E2D22135AD9007D2DF2 /* LaunchScreen.storyboard */,
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				957A7E2522135AD8007D2DF2 /* GameScene.swift in Sources */,
+				95E470DF2213CBC1003B5B57 /* PhysicsCategory.swift in Sources */,
 				957A7E2722135AD8007D2DF2 /* GameViewController.swift in Sources */,
 				957A7E1F22135AD8007D2DF2 /* AppDelegate.swift in Sources */,
 			);

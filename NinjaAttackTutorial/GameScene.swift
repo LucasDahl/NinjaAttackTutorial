@@ -68,6 +68,10 @@ class GameScene: SKScene {
         // Add a new monster every second
         run(SKAction.repeatForever(SKAction.sequence([SKAction.run(addMonster), SKAction.wait(forDuration: 1.0)])))
         
+        // Setup the physics - Needs to not have physics for this game.
+        physicsWorld.gravity = .zero
+        physicsWorld.contactDelegate = self
+        
     }
     
     //================
@@ -147,4 +151,14 @@ class GameScene: SKScene {
         
     }
   
+}
+
+//
+// MARK: - Extension
+//
+
+extension GameScene: SKPhysicsContactDelegate {
+    
+    
+    
 }
