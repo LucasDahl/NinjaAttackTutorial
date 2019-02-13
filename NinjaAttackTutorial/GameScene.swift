@@ -72,6 +72,11 @@ class GameScene: SKScene {
         physicsWorld.gravity = .zero
         physicsWorld.contactDelegate = self
         
+        // Sound effects
+        let backgroundMusic = SKAudioNode(fileNamed: "background-music-aac.caf")
+        backgroundMusic.autoplayLooped = true
+        addChild(backgroundMusic)
+        
     }
     
     //================
@@ -126,6 +131,9 @@ class GameScene: SKScene {
         // Choose one of the touches to work with
         guard let touch = touches.first else { return }
         let touchLocation = touch.location(in: self)
+        
+        // Play the sound effect for projectiles
+        run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
         
         // Setup initial location of the projectile
         let projectile = SKSpriteNode(imageNamed: "projectile")
