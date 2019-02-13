@@ -189,6 +189,22 @@ class GameScene: SKScene {
         projectile.removeFromParent()
         monster.removeFromParent()
         
+        // Add one to the number of monsters destroyed for each hit
+        monsterDestroyed += 1
+        
+        if monsterDestroyed > 30 {
+            
+            // Once the player gets to 30 flip the scene to the GameOverScene
+            let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+            
+            // Reveal the scene
+            let gameOverScene = GameOverScene(size: self.size, won: true)
+            view?.presentScene(gameOverScene, transition: reveal)
+            
+        }
+        
+        
+        
     }
   
 } // End class
