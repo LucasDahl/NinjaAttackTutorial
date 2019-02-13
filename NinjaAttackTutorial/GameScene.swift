@@ -49,6 +49,7 @@ class GameScene: SKScene {
     //===================
     
     let player = SKSpriteNode(imageNamed: "player")
+    var monsterDestroyed = 0
     
     //=========================
     // MARK: - didMove
@@ -122,7 +123,14 @@ class GameScene: SKScene {
         let moveDoneAction = SKAction.removeFromParent()
         
         // Run the the action for the monster
-        monster.run(SKAction.sequence([moveAction, moveDoneAction]))
+        let loseAction = SKAction.run() { [weak self] in
+            guard let `self` = self else { return }
+            let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+            let gameOverScene = GameOverScene(size: self.size, won: false)
+            self.view?.presentScene(gameOverScene, transition: reveal)
+        }
+        
+        monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction]))
         
     }
     
