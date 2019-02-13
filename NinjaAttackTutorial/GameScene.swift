@@ -50,7 +50,7 @@ class GameScene: SKScene {
     
     let player = SKSpriteNode(imageNamed: "player")
     var monsterDestroyed = 0
-    //TODO - add a label to track score and misses
+    var scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
     
     //=========================
     // MARK: - didMove
@@ -64,7 +64,17 @@ class GameScene: SKScene {
         // Set the player position
         player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
         
-        // Add the player to the scene
+        // Setup the score label
+        scoreLabel.text = "Score: 0"
+        scoreLabel.horizontalAlignmentMode = .center
+        scoreLabel.fontColor = SKColor.black
+        scoreLabel.fontSize = 20
+        scoreLabel.position = CGPoint(x: size.width / 12, y: size.height - 40)
+        addChild(scoreLabel)
+
+        
+        
+        // Add the player to the scene and label to the scene
         addChild(player)
         
         // Add a new monster every second
@@ -192,6 +202,10 @@ class GameScene: SKScene {
         
         // Add one to the number of monsters destroyed for each hit
         monsterDestroyed += 1
+        
+        // Update the score label
+        let scoreMessage = "Score: \(monsterDestroyed)"
+        scoreLabel.text = scoreMessage
         
         if monsterDestroyed >= 30 {
             
