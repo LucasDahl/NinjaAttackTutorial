@@ -91,7 +91,7 @@ class GameScene: SKScene {
         // Create a monster Sprite
         let monster = SKSpriteNode(imageNamed: "monster")
         
-        // Setup ip the category bitmask for the objects
+        // Setup ip the category bitmask for the monster
         monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size)
         monster.physicsBody?.isDynamic = true
         monster.physicsBody?.categoryBitMask = PhysicsCategory.monster
@@ -131,6 +131,14 @@ class GameScene: SKScene {
         let projectile = SKSpriteNode(imageNamed: "projectile")
         projectile.position = player.position
         
+         // Setup ip the category bitmask for the monster
+        projectile.physicsBody = SKPhysicsBody(circleOfRadius: projectile.size.width / 2)
+        projectile.physicsBody?.isDynamic = true
+        projectile.physicsBody?.categoryBitMask = PhysicsCategory.projectile
+        projectile.physicsBody?.contactTestBitMask = PhysicsCategory.monster
+        projectile.physicsBody?.collisionBitMask = PhysicsCategory.none
+        projectile.physicsBody?.usesPreciseCollisionDetection = true
+        
         // Determine the offset location to the projectile
         let offset = touchLocation - projectile.position
         
@@ -157,15 +165,43 @@ class GameScene: SKScene {
         projectile.run(SKAction.sequence([moveAction, moveDoneAction]))
         
     }
+    
+    func projectileDidCollideWithMonster(projectile: SKSpriteNode, monster: SKSpriteNode) {
+        
+        print("hit")
+        // Remove both the monster and the projectile once the contact each other
+        projectile.removeFromParent()
+        monster.removeFromParent()
+        
+    }
   
-}
+} // End class
 
-//
+//==================
 // MARK: - Extension
-//
+//==================
 
 extension GameScene: SKPhysicsContactDelegate {
     
-    
-    
-}
+    func didBegin(_ contact: SKPhysicsContact) {
+        
+        // Properties
+        var firstBody: SKPhysicsBody
+        var secondBody: SKPhysicsBody
+        
+        // This is for testing collisions and since they are not passed in any particular order they need to be sorted
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        } else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        if ((firstBody.categoryBitMask & PhysicsCategory.monster != 0) && (secondBody.categoryBitMask & PhysicsCategory.projectile != 0)) {
+            if let monster = firstBody.node as? SKSpriteNode, let projectile = secondBody.node as? SKSpriteNode {
+                projectileDidCollideWithMonster(projectile: projectile, monster: monster)
+            }
+        }
+    }
+} // End extension
