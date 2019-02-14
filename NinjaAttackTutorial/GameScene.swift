@@ -195,7 +195,7 @@ class GameScene: SKScene {
     
     func projectileDidCollideWithMonster(projectile: SKSpriteNode, monster: SKSpriteNode) {
         
-        print("hit")
+        //print("hit")
         // Remove both the monster and the projectile once the contact each other
         projectile.removeFromParent()
         monster.removeFromParent()
