@@ -24,7 +24,6 @@ class MenuScene: SKScene, ButtonDelegate {
             button.delegate = self
         }
         
-        // let button2 = Button(texture: nil, color: .magenta, size: CGSize(width: 200, height: 100))
         let button2 = Button(imageNamed: "play")
         button2.name = "button2"
         button2.position = CGPoint(x: size.width / 2, y: size.height / 2)
