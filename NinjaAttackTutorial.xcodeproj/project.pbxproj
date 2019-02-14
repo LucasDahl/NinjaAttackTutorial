@@ -49,6 +49,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		952C8E9222160572003C2B57 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				957A7E2622135AD8007D2DF2 /* GameViewController.swift */,
+				951F099D2214670E00283CD7 /* GameOverScene.swift */,
+				957A7E2422135AD8007D2DF2 /* GameScene.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		952C8E9322160588003C2B57 /* UI Elemnts */ = {
+			isa = PBXGroup;
+			children = (
+				957736082215B91000978D86 /* MenuScene.swift */,
+				952C8E902215FE88003C2B57 /* Button.swift */,
+			);
+			path = "UI Elemnts";
+			sourceTree = "<group>";
+		};
+		952C8E942216059F003C2B57 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				957A7E1E22135AD8007D2DF2 /* AppDelegate.swift */,
+				95E470DE2213CBC1003B5B57 /* PhysicsCategory.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		957A7E1222135AD8007D2DF2 = {
 			isa = PBXGroup;
 			children = (
@@ -68,13 +96,9 @@
 		957A7E1D22135AD8007D2DF2 /* NinjaAttackTutorial */ = {
 			isa = PBXGroup;
 			children = (
-				957A7E1E22135AD8007D2DF2 /* AppDelegate.swift */,
-				957736082215B91000978D86 /* MenuScene.swift */,
-				957A7E2422135AD8007D2DF2 /* GameScene.swift */,
-				957A7E2622135AD8007D2DF2 /* GameViewController.swift */,
-				951F099D2214670E00283CD7 /* GameOverScene.swift */,
-				952C8E902215FE88003C2B57 /* Button.swift */,
-				95E470DE2213CBC1003B5B57 /* PhysicsCategory.swift */,
+				952C8E9322160588003C2B57 /* UI Elemnts */,
+				952C8E9222160572003C2B57 /* Game */,
+				952C8E942216059F003C2B57 /* Helpers */,
 				957A7E2822135AD8007D2DF2 /* Main.storyboard */,
 				957A7E3622135B48007D2DF2 /* Sounds */,
 				957A7E2B22135AD9007D2DF2 /* Assets.xcassets */,
