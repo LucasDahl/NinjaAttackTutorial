@@ -9,6 +9,7 @@
 import Foundation
 import SpriteKit
 
+// Protcol method
 protocol ButtonDelegate: class {
     func buttonClicked(sender: Button)
 }
@@ -22,15 +23,20 @@ class Button: SKSpriteNode {
         
         super.init(texture: texture, color: color, size: size)
         
+        // Call the setup method
         setup()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
+        // Call the setup method
         setup()
+        
     }
     
+    // Allows for user interaction
     func setup() {
         isUserInteractionEnabled = true
     }
