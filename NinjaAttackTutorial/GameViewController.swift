@@ -16,7 +16,8 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         // Setup the scene
-        let scene = GameScene(size: view.bounds.size)
+        //let scene = GameScene(size: view.bounds.size)
+        let menuScene = MenuScene(size: view.bounds.size)
         
         // Setup the skview
         let skView = view as! SKView
@@ -29,10 +30,15 @@ class GameViewController: UIViewController {
         skView.ignoresSiblingOrder = true
         
         // Set the scene scale mode
-        scene.scaleMode = .resizeFill
+        menuScene.scaleMode = .resizeFill
         
         // Present the scene
-        skView.presentScene(scene)
+        //skView.presentScene(scene)
+        skView.presentScene(menuScene)
+        
+//        if let menuScene = MenuScene(fileNamed: "MenuScene") {
+//            skView.presentScene(menuScene)
+//        }
         
         
     }
