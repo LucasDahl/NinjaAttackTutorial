@@ -24,18 +24,19 @@ class MenuScene: SKScene, ButtonDelegate {
             button.delegate = self
         }
         
-        let button2 = Button(imageNamed: "play")
-        button2.name = "button2"
-        button2.position = CGPoint(x: size.width / 2, y: size.height / 2)
-        button2.delegate = self
-        addChild(button2)
+        // Setup the button
+        let playButton = Button(imageNamed: "play")
+        playButton.name = "button2"
+        playButton.position = CGPoint(x: size.width / 2, y: size.height / 2)
+        playButton.delegate = self
+        addChild(playButton)
         
-        // Add the label
+        // Setup the label
         let label = SKLabelNode(fontNamed: "Chalkduster")
         label.text = "Play Ninja Rush?"
         label.fontColor = SKColor.black
         label.fontSize = 40
-        label.position = CGPoint(x: size.width / 2, y: button2.position.y + 50)
+        label.position = CGPoint(x: size.width / 2, y: playButton.position.y + 50)
         addChild(label)
         
     }
