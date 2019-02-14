@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		951F099E2214670E00283CD7 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F099D2214670E00283CD7 /* GameOverScene.swift */; };
+		952C8E912215FE88003C2B57 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952C8E902215FE88003C2B57 /* Button.swift */; };
 		957736092215B91000978D86 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957736082215B91000978D86 /* MenuScene.swift */; };
 		957A7E1F22135AD8007D2DF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957A7E1E22135AD8007D2DF2 /* AppDelegate.swift */; };
 		957A7E2522135AD8007D2DF2 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957A7E2422135AD8007D2DF2 /* GameScene.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		951F099D2214670E00283CD7 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		952C8E902215FE88003C2B57 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		957736082215B91000978D86 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		957A7E1B22135AD8007D2DF2 /* NinjaAttackTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NinjaAttackTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		957A7E1E22135AD8007D2DF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				957A7E2422135AD8007D2DF2 /* GameScene.swift */,
 				957A7E2622135AD8007D2DF2 /* GameViewController.swift */,
 				951F099D2214670E00283CD7 /* GameOverScene.swift */,
+				952C8E902215FE88003C2B57 /* Button.swift */,
 				95E470DE2213CBC1003B5B57 /* PhysicsCategory.swift */,
 				957A7E2822135AD8007D2DF2 /* Main.storyboard */,
 				957A7E3622135B48007D2DF2 /* Sounds */,
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				952C8E912215FE88003C2B57 /* Button.swift in Sources */,
 				951F099E2214670E00283CD7 /* GameOverScene.swift in Sources */,
 				957A7E2522135AD8007D2DF2 /* GameScene.swift in Sources */,
 				95E470DF2213CBC1003B5B57 /* PhysicsCategory.swift in Sources */,
