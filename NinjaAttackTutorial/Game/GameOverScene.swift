@@ -73,29 +73,60 @@ class GameOverScene: SKScene, ButtonDelegate {
 //            }
 //            ]))
     
+    //================
+    // MARK: - Methods
+    //================
+    
+    func sceneToDisplay(scene: String) {
+        
+        var sceneToPlay = SKScene()
+        
+        switch scene {
+        case "playButton":
+            sceneToPlay = GameScene(size: view!.bounds.size)
+        case "menuButton":
+            sceneToPlay = MenuScene(size: view!.bounds.size)
+        default:
+            return
+        }
+        
+        // Set the scene scale mode
+        sceneToPlay.scaleMode = .resizeFill
+        
+        // Present the scene
+        self.view!.presentScene(sceneToPlay)
+        
+    }
+    
+    //=======================
+    // MARK: - Button clicked
+    //=======================
+    
     func buttonClicked(sender: Button) {
         
-        if sender.name == "playMenu" {
+        if sender.name == "playButton" {
             
-            // Setup the scene
-            let scene = GameScene(size: view!.bounds.size)
-            
-            // Set the scene scale mode
-            scene.scaleMode = .resizeFill
-            
-            // Present the scene
-            self.view!.presentScene(scene)
+//            // Setup the scene
+//            let scene = GameScene(size: view!.bounds.size)
+//
+//            // Set the scene scale mode
+//            scene.scaleMode = .resizeFill
+//
+//            // Present the scene
+//            self.view!.presentScene(scene)
+            sceneToDisplay(scene: "playButton")
             
         } else {
             
-            // Setup the scene
-            let scene = MenuScene(size: view!.bounds.size)
-            
-            // Set the scale mode
-            scene.scaleMode = .resizeFill
-            
-            // Present the scene
-            self.view!.presentScene(scene)
+//            // Setup the scene
+//            let scene = MenuScene(size: view!.bounds.size)
+//
+//            // Set the scale mode
+//            scene.scaleMode = .resizeFill
+//
+//            // Present the scene
+//            self.view!.presentScene(scene)
+            sceneToDisplay(scene: "menuButton")
             
         }
         
