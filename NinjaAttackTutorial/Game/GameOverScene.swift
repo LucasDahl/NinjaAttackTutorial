@@ -36,12 +36,19 @@ class GameOverScene: SKScene, ButtonDelegate {
             button.delegate = self
         }
         
-        // Setup the button
+        // Setup the playbutton
         let playButton = Button(imageNamed: "play")
-        playButton.name = "button"
-        playButton.position = CGPoint(x: label.position.x, y: label.position.y - 100)
+        playButton.name = "playButton"
+        playButton.position = CGPoint(x: (label.position.x) - 50, y: label.position.y - 100)
         playButton.delegate = self
         addChild(playButton)
+        
+        // Setup the menuButton
+        let menuButton = Button(imageNamed: "home")
+        menuButton.name = "menuButton"
+        menuButton.position = CGPoint(x: (label.position.x) + 50, y: label.position.y - 100)
+        menuButton.delegate = self
+        addChild(menuButton)
         
         // Setup the label
         let labelMessage = SKLabelNode(fontNamed: "Chalkduster")
@@ -67,14 +74,32 @@ class GameOverScene: SKScene, ButtonDelegate {
 //            ]))
     
     func buttonClicked(sender: Button) {
-        // Setup the scene
-        let scene = GameScene(size: view!.bounds.size)
         
-        // Set the scene scale mode
-        scene.scaleMode = .resizeFill
+        if sender.name == "playMenu" {
+            
+            // Setup the scene
+            let scene = GameScene(size: view!.bounds.size)
+            
+            // Set the scene scale mode
+            scene.scaleMode = .resizeFill
+            
+            // Present the scene
+            self.view!.presentScene(scene)
+            
+        } else {
+            
+            // Setup the scene
+            let scene = MenuScene(size: view!.bounds.size)
+            
+            // Set the scale mode
+            scene.scaleMode = .resizeFill
+            
+            // Present the scene
+            self.view!.presentScene(scene)
+            
+        }
         
-        // Present the scene
-        self.view!.presentScene(scene)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
