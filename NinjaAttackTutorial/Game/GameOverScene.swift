@@ -30,10 +30,11 @@ class GameOverScene: SKScene, ButtonDelegate {
         label.position = CGPoint(x: size.width / 2, y: (size.height / 2) + 50)
         addChild(label)
         
-//        if let button = self.childNode(withName: "button") as? Button {
-//            self.button = button
-//            button.delegate = self
-//        }
+        // Make sure there is a button
+        if let button = self.childNode(withName: "button") as? Button {
+            self.button = button
+            button.delegate = self
+        }
         
         // Setup the button
         let playButton = Button(imageNamed: "play")
@@ -52,7 +53,7 @@ class GameOverScene: SKScene, ButtonDelegate {
         
     }
 
-        // Run the action
+        // Run the action (this takes out the ability to get to the main menu)
 //        run(SKAction.sequence([
 //            SKAction.wait(forDuration: 3.0),
 //            SKAction.run() { [weak self] in
