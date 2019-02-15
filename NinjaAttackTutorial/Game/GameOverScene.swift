@@ -79,9 +79,12 @@ class GameOverScene: SKScene, ButtonDelegate {
     
     func sceneToDisplay(scene: String) {
         
+        // Temporary variable to assign the scene to
         var sceneToPlay = SKScene()
         
+        // Switch on the button name to determine the right scene to assign to the variable
         switch scene {
+        //TODO: - Make a enum to switch on
         case "playButton":
             sceneToPlay = GameScene(size: view!.bounds.size)
         case "menuButton":
@@ -104,28 +107,13 @@ class GameOverScene: SKScene, ButtonDelegate {
     
     func buttonClicked(sender: Button) {
         
+        // Decide which button was clicked on by the user
         if sender.name == "playButton" {
             
-//            // Setup the scene
-//            let scene = GameScene(size: view!.bounds.size)
-//
-//            // Set the scene scale mode
-//            scene.scaleMode = .resizeFill
-//
-//            // Present the scene
-//            self.view!.presentScene(scene)
             sceneToDisplay(scene: "playButton")
             
         } else {
             
-//            // Setup the scene
-//            let scene = MenuScene(size: view!.bounds.size)
-//
-//            // Set the scale mode
-//            scene.scaleMode = .resizeFill
-//
-//            // Present the scene
-//            self.view!.presentScene(scene)
             sceneToDisplay(scene: "menuButton")
             
         }
