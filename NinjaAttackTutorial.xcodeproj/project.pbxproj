@@ -18,6 +18,7 @@
 		957A7E2F22135AD9007D2DF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 957A7E2D22135AD9007D2DF2 /* LaunchScreen.storyboard */; };
 		957A7E3922135B56007D2DF2 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 957A7E3722135B56007D2DF2 /* background-music-aac.caf */; };
 		957A7E3A22135B56007D2DF2 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 957A7E3822135B56007D2DF2 /* pew-pew-lei.caf */; };
+		95888CFB221AFCF50001F4B9 /* grass.sks in Resources */ = {isa = PBXBuildFile; fileRef = 95888CFA221AFCF50001F4B9 /* grass.sks */; };
 		95E470DF2213CBC1003B5B57 /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E470DE2213CBC1003B5B57 /* PhysicsCategory.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		957A7E3022135AD9007D2DF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		957A7E3722135B56007D2DF2 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
 		957A7E3822135B56007D2DF2 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		95888CFA221AFCF50001F4B9 /* grass.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = grass.sks; sourceTree = "<group>"; };
 		95E470DE2213CBC1003B5B57 /* PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,9 +54,9 @@
 		952C8E9222160572003C2B57 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				957A7E2422135AD8007D2DF2 /* GameScene.swift */,
 				957A7E2622135AD8007D2DF2 /* GameViewController.swift */,
 				951F099D2214670E00283CD7 /* GameOverScene.swift */,
-				957A7E2422135AD8007D2DF2 /* GameScene.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -96,6 +98,7 @@
 		957A7E1D22135AD8007D2DF2 /* NinjaAttackTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				95888CFA221AFCF50001F4B9 /* grass.sks */,
 				952C8E9322160588003C2B57 /* UI Elemnts */,
 				952C8E9222160572003C2B57 /* Game */,
 				952C8E942216059F003C2B57 /* Helpers */,
@@ -175,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95888CFB221AFCF50001F4B9 /* grass.sks in Resources */,
 				957A7E3A22135B56007D2DF2 /* pew-pew-lei.caf in Resources */,
 				957A7E2A22135AD8007D2DF2 /* Main.storyboard in Resources */,
 				957A7E3922135B56007D2DF2 /* background-music-aac.caf in Resources */,

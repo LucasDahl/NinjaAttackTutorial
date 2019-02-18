@@ -52,14 +52,13 @@ class GameScene: SKScene {
     var monsterDestroyed = 0
     var scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
     
-    //=========================
+    //================
     // MARK: - didMove
-    //=========================
+    //================
     
     override func didMove(to view: SKView) {
         
-        // Set the background color of the scene
-        backgroundColor = SKColor.white
+        setupTileSet()
         
         // Set the player position
         player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
@@ -144,6 +143,45 @@ class GameScene: SKScene {
         monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction]))
         
     }
+    
+    func setupTileSet() {
+        
+        let bgTexture = SKTexture(imageNamed: "grass")
+        let bgDefinition = SKTileDefinition(texture: bgTexture, size: bgTexture.size())
+        let bgGroup = SKTileGroup(tileDefinition: bgDefinition)
+        let tileSet = SKTileSet(tileGroups: [bgGroup])
+        let bgNode = SKTileMapNode(tileSet: tileSet, columns: 15, rows: 15, tileSize: bgTexture.size())
+        bgNode.position = CGPoint(x: view!.frame.size.width, y: view!.frame.size.height)
+        bgNode.setScale(0.5)
+        
+        let tile = bgNode.tileSet.tileGroups.first(
+            where: {$0.name == "grass"})
+        
+        for column in 0...4 {
+            for row in 0...4 {
+                bgNode.setTileGroup(tile, forColumn: column, row: row)
+            }
+        }
+        
+        guard SKTileSet(named: "grassTile") != nil else {
+            // hint: don't use the filename for named, use the tileset inside
+            fatalError()
+        }
+        
+        let tileSize = tileSet.defaultTileSize // from image size
+        let tileMap = SKTileMapNode(tileSet: tileSet, columns: 15, rows: 15, tileSize: tileSize)
+        let tileGroup = tileSet.tileGroups.first
+        tileMap.fill(with: tileGroup) // fill or set by column/row
+        tileMap.setTileGroup(tileGroup, forColumn: 15, row: 15)
+        self.addChild(tileMap)
+        bgNode.fill(with: tile)
+        addChild(bgNode)
+        
+    }
+    
+    //================
+    // MARK: - Touches
+    //================
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
