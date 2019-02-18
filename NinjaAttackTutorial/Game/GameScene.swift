@@ -172,6 +172,7 @@ class GameScene: SKScene {
             fatalError()
         }
         
+        // Finish setting up the tiles
         let tileSize = tileSet.defaultTileSize // from image size
         let tileMap = SKTileMapNode(tileSet: tileSet, columns: 15, rows: 15, tileSize: tileSize)
         let tileGroup = tileSet.tileGroups.first
@@ -259,8 +260,6 @@ class GameScene: SKScene {
             view?.presentScene(gameOverScene, transition: reveal)
             
         }
-        
-        
         
     }
   
