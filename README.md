@@ -1,4 +1,4 @@
 # NinjaAttackTutorial
 A Ninja attack game made from a tutorial from raywenderlich.com.
 
-I have done more than the tutorial for practice and future ideas.
+I am adding more than the tutorial covers to get/learm new ideas for future projects.
