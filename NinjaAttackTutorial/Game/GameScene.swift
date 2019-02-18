@@ -147,6 +147,7 @@ class GameScene: SKScene {
     // This is how to setup the tile set programmaticlly
     func setupTileSet() {
         
+        // Setup the tiles
         let bgTexture = SKTexture(imageNamed: "grass")
         let bgDefinition = SKTileDefinition(texture: bgTexture, size: bgTexture.size())
         let bgGroup = SKTileGroup(tileDefinition: bgDefinition)
@@ -158,12 +159,14 @@ class GameScene: SKScene {
         let tile = bgNode.tileSet.tileGroups.first(
             where: {$0.name == "grass"})
         
+        // Loop through the columns to place the tile
         for column in 0...4 {
             for row in 0...4 {
                 bgNode.setTileGroup(tile, forColumn: column, row: row)
             }
         }
         
+        // Makesure there is a tile that can be found
         guard SKTileSet(named: "Tiles") != nil else {
             // Don't use the filename for named, use the tileset inside
             fatalError()
