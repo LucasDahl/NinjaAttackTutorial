@@ -152,7 +152,7 @@ class GameScene: SKScene {
         let tileSet = SKTileSet(tileGroups: [bgGroup])
         let bgNode = SKTileMapNode(tileSet: tileSet, columns: 15, rows: 15, tileSize: bgTexture.size())
         bgNode.position = CGPoint(x: view!.frame.size.width, y: view!.frame.size.height)
-        bgNode.setScale(0.5)
+        bgNode.setScale(1)
         
         let tile = bgNode.tileSet.tileGroups.first(
             where: {$0.name == "grass"})
