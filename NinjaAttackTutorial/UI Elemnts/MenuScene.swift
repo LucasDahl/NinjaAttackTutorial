@@ -47,9 +47,9 @@ class MenuScene: SKScene, ButtonDelegate {
     //================
     // MARK: - Methods
     //================
-    
+    // TODO: Add a clss for the monsters and the tile background to conform to the DRY principal
     // This conflicts with the DRY principal, need to refactor
-    // ========================= Start refactor needed
+    // TODO: ========================= Start refactor needed
     
     func random() -> CGFloat {
         return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
