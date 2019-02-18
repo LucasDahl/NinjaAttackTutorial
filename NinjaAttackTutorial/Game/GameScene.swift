@@ -144,6 +144,7 @@ class GameScene: SKScene {
         
     }
     
+    
     func setupTileSet() {
         
         let bgTexture = SKTexture(imageNamed: "grass")
@@ -163,7 +164,7 @@ class GameScene: SKScene {
             }
         }
         
-        guard SKTileSet(named: "grassTile") != nil else {
+        guard SKTileSet(named: "Tiles") != nil else {
             // hint: don't use the filename for named, use the tileset inside
             fatalError()
         }
