@@ -58,14 +58,6 @@ class MenuScene: SharredScene, ButtonDelegate {
     // This conflicts with the DRY principal, need to refactor
     // TODO: ========================= Start refactor needed
     
-    override func random() -> CGFloat {
-        return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
-    }
-    
-    override func random(min: CGFloat, max: CGFloat) -> CGFloat {
-        return random() * (max - min) + min
-    }
-    
     func monsterBackground() {
         
         // Create a monster Sprite

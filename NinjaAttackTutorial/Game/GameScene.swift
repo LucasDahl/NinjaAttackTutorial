@@ -94,15 +94,6 @@ class GameScene: SharredScene {
     // MARK: - Methods
     //================
     
-    override func random() -> CGFloat {
-        return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
-    }
-    
-    override func random(min: CGFloat, max: CGFloat) -> CGFloat {
-        return random() * (max - min) + min
-    }
-    
-    
     func addMonster() {
 
         // Create a monster Sprite
