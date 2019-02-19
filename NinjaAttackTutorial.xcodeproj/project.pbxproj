@@ -100,10 +100,10 @@
 		957A7E1D22135AD8007D2DF2 /* NinjaAttackTutorial */ = {
 			isa = PBXGroup;
 			children = (
-				9548426C221B464D0076F54F /* TileSet.sks */,
 				952C8E9322160588003C2B57 /* UI Elemnts */,
 				952C8E9222160572003C2B57 /* Game */,
 				952C8E942216059F003C2B57 /* Helpers */,
+				95CA3245221C51A400AA5C53 /* Tile Sets */,
 				957A7E2822135AD8007D2DF2 /* Main.storyboard */,
 				957A7E3622135B48007D2DF2 /* Sounds */,
 				957A7E2B22135AD9007D2DF2 /* Assets.xcassets */,
@@ -121,6 +121,14 @@
 				957A7E3822135B56007D2DF2 /* pew-pew-lei.caf */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		95CA3245221C51A400AA5C53 /* Tile Sets */ = {
+			isa = PBXGroup;
+			children = (
+				9548426C221B464D0076F54F /* TileSet.sks */,
+			);
+			path = "Tile Sets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
