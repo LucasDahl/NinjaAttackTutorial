@@ -16,7 +16,7 @@ protocol ButtonDelegate: class {
 
 class Button: SKSpriteNode {
     
-    //weak so that you don't create a strong circular reference with the parent
+    // Weak so that you don't create a strong circular reference with the parent
     weak var delegate: ButtonDelegate!
     
     override init(texture: SKTexture?, color: SKColor, size: CGSize) {

@@ -52,9 +52,9 @@ class GameScene: SharredScene {
     var monsterDestroyed = 0
     var scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
     
-    //================
-    // MARK: - didMove
-    //================
+    //=========================
+    // MARK: - Override Methods
+    //=========================
     
     override func didMove(to view: SKView) {
         

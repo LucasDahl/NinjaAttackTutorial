@@ -10,9 +10,15 @@ import SpriteKit
 
 class MenuScene: SharredScene, ButtonDelegate {
     
-    // Properties
+    //===================
+    // MARK: - Properties
+    //===================
     
     private var button = Button()
+    
+    //=========================
+    // MARK: - Override Methods
+    //=========================
     
     override func didMove(to view: SKView) {
         
