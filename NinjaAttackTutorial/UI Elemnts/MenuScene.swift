@@ -22,8 +22,9 @@ class MenuScene: SharredScene, ButtonDelegate {
     
     override func didMove(to view: SKView) {
         
-        // Set the color of the view
-        backgroundColor = SKColor.white
+        // Setup tiles
+        //backgroundColor = SKColor.white
+        setupTileSet()
         
         if let button = self.childNode(withName: "button") as? Button {
             self.button = button
@@ -57,11 +58,11 @@ class MenuScene: SharredScene, ButtonDelegate {
     // This conflicts with the DRY principal, need to refactor
     // TODO: ========================= Start refactor needed
     
-    func random() -> CGFloat {
+    override func random() -> CGFloat {
         return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
     }
     
-    func random(min: CGFloat, max: CGFloat) -> CGFloat {
+    override func random(min: CGFloat, max: CGFloat) -> CGFloat {
         return random() * (max - min) + min
     }
     
