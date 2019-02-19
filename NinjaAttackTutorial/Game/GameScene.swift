@@ -42,7 +42,7 @@ extension CGPoint {
     }
 }
 
-class GameScene: SKScene {
+class GameScene: SharredScene {
     
     //===================
     // MARK: - Properties

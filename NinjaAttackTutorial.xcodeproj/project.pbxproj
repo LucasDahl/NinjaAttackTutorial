@@ -20,6 +20,7 @@
 		957A7E2F22135AD9007D2DF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 957A7E2D22135AD9007D2DF2 /* LaunchScreen.storyboard */; };
 		957A7E3922135B56007D2DF2 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 957A7E3722135B56007D2DF2 /* background-music-aac.caf */; };
 		957A7E3A22135B56007D2DF2 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 957A7E3822135B56007D2DF2 /* pew-pew-lei.caf */; };
+		95CA3247221C520000AA5C53 /* SharredScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CA3246221C520000AA5C53 /* SharredScene.swift */; };
 		95E470DF2213CBC1003B5B57 /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E470DE2213CBC1003B5B57 /* PhysicsCategory.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		957A7E3022135AD9007D2DF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		957A7E3722135B56007D2DF2 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
 		957A7E3822135B56007D2DF2 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		95CA3246221C520000AA5C53 /* SharredScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharredScene.swift; sourceTree = "<group>"; };
 		95E470DE2213CBC1003B5B57 /* PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 		957A7E1D22135AD8007D2DF2 /* NinjaAttackTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				95CA3246221C520000AA5C53 /* SharredScene.swift */,
 				952C8E9322160588003C2B57 /* UI Elemnts */,
 				952C8E9222160572003C2B57 /* Game */,
 				952C8E942216059F003C2B57 /* Helpers */,
@@ -210,6 +213,7 @@
 				951F099E2214670E00283CD7 /* GameOverScene.swift in Sources */,
 				957A7E2522135AD8007D2DF2 /* GameScene.swift in Sources */,
 				95E470DF2213CBC1003B5B57 /* PhysicsCategory.swift in Sources */,
+				95CA3247221C520000AA5C53 /* SharredScene.swift in Sources */,
 				957736092215B91000978D86 /* MenuScene.swift in Sources */,
 				957A7E2722135AD8007D2DF2 /* GameViewController.swift in Sources */,
 				957A7E1F22135AD8007D2DF2 /* AppDelegate.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class MenuScene: SKScene, ButtonDelegate {
+class MenuScene: SharredScene, ButtonDelegate {
     
     // Properties
     
