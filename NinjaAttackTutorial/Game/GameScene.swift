@@ -97,7 +97,7 @@ class GameScene: SharredScene {
     // MARK: - Methods
     //================
     
-    func addMonster() {
+    func addMonster(/*actionsArray: [SKAction]*/) {
 
         // Create a monster Sprite
         let monster = SKSpriteNode(imageNamed: "monster")
@@ -136,6 +136,7 @@ class GameScene: SharredScene {
         }
 
         monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction]))
+        //monster.run(SKAction.sequence([actionsArray]))
 
     }
     

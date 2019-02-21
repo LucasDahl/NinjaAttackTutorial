@@ -17,7 +17,9 @@ class SharredScene: SKScene {
     func random(min: CGFloat, max: CGFloat) -> CGFloat {
         return random() * (max - min) + min
     }
+    let monster = SKSpriteNode(imageNamed: "monster")
     
+    //TODO: add actions so that the addmonster method can be called from all sharred scenes
     
     // This is how to setup the tile set programmaticlly
     func setupTileSet() {
