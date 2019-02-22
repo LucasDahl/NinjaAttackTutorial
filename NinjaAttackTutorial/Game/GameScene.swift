@@ -97,48 +97,48 @@ class GameScene: SharredScene {
     // MARK: - Methods
     //================
     
-    func addMonster(/*actionsArray: [SKAction]*/) {
-
-        // Create a monster Sprite
-        let monster = SKSpriteNode(imageNamed: "monster")
-
-        // Setup ip the category bitmask for the monster
-        monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size)
-        monster.physicsBody?.isDynamic = true
-        monster.physicsBody?.categoryBitMask = PhysicsCategory.monster
-        monster.physicsBody?.contactTestBitMask = PhysicsCategory.projectile
-        monster.physicsBody?.collisionBitMask = PhysicsCategory.none
-
-        // Determine where to spawn the monster along the Y axis
-        let actualY = random(min: monster.size.height / 2, max: size.height - monster.size.height / 2)
-
-        // Position the monster slightly off-screen along the right edge, and along a random position along the Y axis as calculated above
-        monster.position = CGPoint(x: size.width + monster.size.width / 2, y: actualY)
-
-        // Add the monster to the scene
-        addChild(monster)
-
-        // Determine the speed of the monster
-        let actualDuration = random(min: CGFloat(2.0), max: CGFloat(4.0))
-
-        // Create the actions for the monster
-        let moveAction = SKAction.move(to: CGPoint(x: -monster.size.width/2, y: actualY), duration: TimeInterval(actualDuration))
-
-        // Create the action to remove the monster after it is off the screen
-        let moveDoneAction = SKAction.removeFromParent()
-
-        // Run the the action for the monster
-        let loseAction = SKAction.run() { [weak self] in
-            guard let `self` = self else { return }
-            let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
-            let gameOverScene = GameOverScene(size: self.size, won: false)
-            self.view?.presentScene(gameOverScene, transition: reveal)
-        }
-
-        monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction]))
-        //monster.run(SKAction.sequence([actionsArray]))
-
-    }
+//    func addMonster() {
+//
+//        // Create a monster Sprite
+//        let monster = SKSpriteNode(imageNamed: "monster")
+//
+//        // Setup ip the category bitmask for the monster
+//        monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size)
+//        monster.physicsBody?.isDynamic = true
+//        monster.physicsBody?.categoryBitMask = PhysicsCategory.monster
+//        monster.physicsBody?.contactTestBitMask = PhysicsCategory.projectile
+//        monster.physicsBody?.collisionBitMask = PhysicsCategory.none
+//
+//        // Determine where to spawn the monster along the Y axis
+//        let actualY = random(min: monster.size.height / 2, max: size.height - monster.size.height / 2)
+//
+//        // Position the monster slightly off-screen along the right edge, and along a random position along the Y axis as calculated above
+//        monster.position = CGPoint(x: size.width + monster.size.width / 2, y: actualY)
+//
+//        // Add the monster to the scene
+//        addChild(monster)
+//
+//        // Determine the speed of the monster
+//        let actualDuration = random(min: CGFloat(2.0), max: CGFloat(4.0))
+//
+//        // Create the actions for the monster
+//        let moveAction = SKAction.move(to: CGPoint(x: -monster.size.width/2, y: actualY), duration: TimeInterval(actualDuration))
+//
+//        // Create the action to remove the monster after it is off the screen
+//        let moveDoneAction = SKAction.removeFromParent()
+//
+//        // Run the the action for the monster
+//        let loseAction = SKAction.run() { [weak self] in
+//            guard let `self` = self else { return }
+//            let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+//            let gameOverScene = GameOverScene(size: self.size, won: false)
+//            self.view?.presentScene(gameOverScene, transition: reveal)
+//        }
+//        
+//
+//        monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction]))
+//
+//    }
     
     //================
     // MARK: - Touches
