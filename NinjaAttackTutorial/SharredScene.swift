@@ -32,11 +32,11 @@ class SharredScene: SKScene {
         let monster = SKSpriteNode(imageNamed: "monster")
         
         // Setup ip the category bitmask for the monster - This cannot be applied to the menu screen(it freaks out)
-        monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size)
-        monster.physicsBody?.isDynamic = true
-        monster.physicsBody?.categoryBitMask = PhysicsCategory.monster
-        monster.physicsBody?.contactTestBitMask = PhysicsCategory.projectile
-        monster.physicsBody?.collisionBitMask = PhysicsCategory.none
+//        monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size)
+//        monster.physicsBody?.isDynamic = true
+//        monster.physicsBody?.categoryBitMask = PhysicsCategory.monster
+//        monster.physicsBody?.contactTestBitMask = PhysicsCategory.projectile
+//        monster.physicsBody?.collisionBitMask = PhysicsCategory.none
         
         // Determine where to spawn the monster along the Y axis
         let actualY = random(min: monster.size.height / 2, max: size.height - monster.size.height / 2)
@@ -62,6 +62,11 @@ class SharredScene: SKScene {
             let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
             let gameOverScene = GameOverScene(size: self.size, won: false)
             self.view?.presentScene(gameOverScene, transition: reveal)
+        }
+        if scene.self == MenuScene() {
+            print("Menu")
+        } else {
+            print("other")
         }
 
         
