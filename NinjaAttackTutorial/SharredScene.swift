@@ -25,12 +25,13 @@ class SharredScene: SKScene {
         return random() * (max - min) + min
     }
     
+    //TODO: add actions so that the addmonster method can be called from all sharred scenes
     func addMonster() {
         
         // Create a monster Sprite
         let monster = SKSpriteNode(imageNamed: "monster")
         
-        // Setup ip the category bitmask for the monster
+        // Setup ip the category bitmask for the monster - This cannot be applied to the menu screen(it freaks out)
         monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size)
         monster.physicsBody?.isDynamic = true
         monster.physicsBody?.categoryBitMask = PhysicsCategory.monster
@@ -63,9 +64,11 @@ class SharredScene: SKScene {
             self.view?.presentScene(gameOverScene, transition: reveal)
         }
 
-        //: TODO add more actions for different levels
-        monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction]))
+        
     
+        //monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction]))
+        monster.run(SKAction.sequence([moveAction, moveDoneAction]))
+        
         
     }
     
