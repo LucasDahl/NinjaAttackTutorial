@@ -63,7 +63,7 @@ class SharredScene: SKScene {
             self.view?.presentScene(gameOverScene, transition: reveal)
         }
 
-        //TODO add more actions for different levels
+        //: TODO add more actions for different levels
         monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction]))
     
         
