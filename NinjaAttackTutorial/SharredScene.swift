@@ -56,7 +56,7 @@ class SharredScene: SKScene {
         // Create the action to remove the monster after it is off the screen
         let moveDoneAction = SKAction.removeFromParent()
         
-        // Run the the action for the monster
+        // Run the the action for the monster - will use later once the method has a a switch or if statment
         let loseAction = SKAction.run() { [weak self] in
             guard let `self` = self else { return }
             let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
