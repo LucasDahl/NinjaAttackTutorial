@@ -70,9 +70,9 @@ class SharredScene: SKScene {
         }
 
         
-    
-        //monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction]))
-        monster.run(SKAction.sequence([moveAction, moveDoneAction]))
+        // TODO: - Add a switch of If statement to choose which action to load
+        //monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction])) // This will be for the GameScene
+        monster.run(SKAction.sequence([moveAction, moveDoneAction])) // This will be for the MenuScene
         
         
     }
