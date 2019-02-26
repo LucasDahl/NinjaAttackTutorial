@@ -63,7 +63,9 @@ class SharredScene: SKScene {
             let gameOverScene = GameOverScene(size: self.size, won: false)
             self.view?.presentScene(gameOverScene, transition: reveal)
         }
-        if scene.self == MenuScene() {
+        
+        // TODO: Fix this so it can pick wich method actions to call.
+        if self.view == MenuScene() {
             print("Menu")
         } else {
             print("other")
