@@ -32,6 +32,7 @@ class SharredScene: SKScene {
         let monster = SKSpriteNode(imageNamed: "monster")
         
         // Setup ip the category bitmask for the monster - This cannot be applied to the menu screen(it freaks out)
+        // Uncomment after it can be put in a switch or if statment.
 //        monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size)
 //        monster.physicsBody?.isDynamic = true
 //        monster.physicsBody?.categoryBitMask = PhysicsCategory.monster
