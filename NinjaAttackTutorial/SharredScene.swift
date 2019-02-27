@@ -8,13 +8,16 @@
 
 import SpriteKit
 
+enum sceneType: String {
+    case Menu, Game
+}
+
 class SharredScene: SKScene {
     
     
     //===================
     // MARK: - Properties
     //===================
-    
     let monster = SKSpriteNode(imageNamed: "monster")
     
     func random() -> CGFloat {
@@ -66,12 +69,15 @@ class SharredScene: SKScene {
         }
         
         // TODO: Fix this so it can pick wich method actions to call.
-        if self.view == MenuScene() {
-            print("Menu")
-        } else {
-            print("other")
+        var test1 = ""
+        let test = sceneType(rawValue: test1)
+        
+        switch test {
+        case :
+            print("menu")
+        default:
+            return
         }
-
         
         // TODO: - Add a switch of If statement to choose which action to load
         //monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction])) // This will be for the GameScene
