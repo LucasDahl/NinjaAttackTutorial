@@ -55,6 +55,7 @@ class MenuScene: SharredScene, ButtonDelegate {
     // MARK: - Methods
     //================
     
+    //TODO: fix the retain cycele
     // Creates a reatin cycle
     func createMonster() {
         addMonster(newScene: SceneType.menuScene)
