@@ -8,8 +8,9 @@
 
 import SpriteKit
 
-enum sceneType: String {
-    case Menu, Game
+enum SceneType: Int {
+    case menuScene
+    case gameScene
 }
 
 class SharredScene: SKScene {
@@ -68,16 +69,10 @@ class SharredScene: SKScene {
             self.view?.presentScene(gameOverScene, transition: reveal)
         }
         
-        // TODO: Fix this so it can pick wich method actions to call.
-        var test1 = ""
-        let test = sceneType(rawValue: test1)
+        // TODO: Fix this so it can pick wich method actions to call
         
-        switch test {
-        case :
-            print("menu")
-        default:
-            return
-        }
+        
+    
         
         // TODO: - Add a switch of If statement to choose which action to load
         //monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction])) // This will be for the GameScene
@@ -85,6 +80,21 @@ class SharredScene: SKScene {
         
         
     }
+    
+    func goToScene(newScene: SceneType) {
+        
+        var sceneToLoad:SKScene?
+        
+        switch newScene {
+        case SceneType.menuScene:
+            print("menu")
+        case SceneType.gameScene:
+            print("game")
+        default:
+            return
+        }
+            
+        }
     
     // This is how to setup the tile set programmaticlly
     func setupTileSet() {

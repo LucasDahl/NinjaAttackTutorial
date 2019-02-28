@@ -78,7 +78,7 @@ class GameScene: SharredScene {
         
         // Add the player to the scene and label to the scene
         addChild(player)
-        
+        goToScene(newScene: SceneType.gameScene)
         // Add a new monster every second
         run(SKAction.repeatForever(SKAction.sequence([SKAction.run(addMonster), SKAction.wait(forDuration: 1.0)])))
         
