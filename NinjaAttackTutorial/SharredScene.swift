@@ -30,7 +30,7 @@ class SharredScene: SKScene {
     }
     
     //TODO: add actions so that the addmonster method can be called from all sharred scenes
-    func addMonster() {
+    func addMonster(newScene: SceneType) {
         
         // Create a monster Sprite
         let monster = SKSpriteNode(imageNamed: "monster")
@@ -68,15 +68,18 @@ class SharredScene: SKScene {
             let gameOverScene = GameOverScene(size: self.size, won: false)
             self.view?.presentScene(gameOverScene, transition: reveal)
         }
-        
-        // TODO: Fix this so it can pick wich method actions to call
-        
-        
-    
+
+        // TODO: need to fix this so SceneType can be called in the other scenes
+        // Find out which scene is the current scene
+        if newScene == SceneType.menuScene {
+            monster.run(SKAction.sequence([moveAction, moveDoneAction]))
+        } else if   newScene == SceneType.gameScene {
+            monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction]))
+        }
         
         // TODO: - Add a switch of If statement to choose which action to load
         //monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction])) // This will be for the GameScene
-        monster.run(SKAction.sequence([moveAction, moveDoneAction])) // This will be for the MenuScene
+        //monster.run(SKAction.sequence([moveAction, moveDoneAction])) // This will be for the MenuScene
         
         
     }
