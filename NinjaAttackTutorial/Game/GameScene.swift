@@ -78,9 +78,9 @@ class GameScene: SharredScene {
         
         // Add the player to the scene and label to the scene
         addChild(player)
-        goToScene(newScene: SceneType.gameScene)
+        //goToScene(newScene: SceneType.gameScene)
         // Add a new monster every second
-        run(SKAction.repeatForever(SKAction.sequence([SKAction.run(addMonster), SKAction.wait(forDuration: 1.0)])))
+        run(SKAction.repeatForever(SKAction.sequence([SKAction.run(createMonster), SKAction.wait(forDuration: 1.0)])))
         
         // Setup the physics - Needs to not have physics for this game
         physicsWorld.gravity = .zero
@@ -96,7 +96,10 @@ class GameScene: SharredScene {
     //================
     // MARK: - Methods
     //================
-
+    // Creates a reatin cycle
+    func createMonster() {
+        addMonster(newScene: SceneType.gameScene)
+    }
     
     //================
     // MARK: - Touches

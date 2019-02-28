@@ -21,27 +21,14 @@ class SharredScene: SKScene {
     //===================
     let monster = SKSpriteNode(imageNamed: "monster")
     
-    func random() -> CGFloat {
-        return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
-    }
-    
-    func random(min: CGFloat, max: CGFloat) -> CGFloat {
-        return random() * (max - min) + min
-    }
-    
-    //TODO: add actions so that the addmonster method can be called from all sharred scenes
+    //==============
+    // MARK: Methods
+    //==============
+  
     func addMonster(newScene: SceneType) {
         
         // Create a monster Sprite
         let monster = SKSpriteNode(imageNamed: "monster")
-        
-        // Setup ip the category bitmask for the monster - This cannot be applied to the menu screen(it freaks out)
-        // Uncomment after it can be put in a switch or if statment.
-//        monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size)
-//        monster.physicsBody?.isDynamic = true
-//        monster.physicsBody?.categoryBitMask = PhysicsCategory.monster
-//        monster.physicsBody?.contactTestBitMask = PhysicsCategory.projectile
-//        monster.physicsBody?.collisionBitMask = PhysicsCategory.none
         
         // Determine where to spawn the monster along the Y axis
         let actualY = random(min: monster.size.height / 2, max: size.height - monster.size.height / 2)
@@ -69,35 +56,42 @@ class SharredScene: SKScene {
             self.view?.presentScene(gameOverScene, transition: reveal)
         }
 
-        // TODO: need to fix this so SceneType can be called in the other scenes
         // Find out which scene is the current scene
-        if newScene == SceneType.menuScene {
-            monster.run(SKAction.sequence([moveAction, moveDoneAction]))
-        } else if   newScene == SceneType.gameScene {
-            monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction]))
-        }
-        
-        // TODO: - Add a switch of If statement to choose which action to load
-        //monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction])) // This will be for the GameScene
-        //monster.run(SKAction.sequence([moveAction, moveDoneAction])) // This will be for the MenuScene
-        
-        
-    }
-    
-    func goToScene(newScene: SceneType) {
-        
-        var sceneToLoad:SKScene?
-        
         switch newScene {
+            
         case SceneType.menuScene:
-            print("menu")
+            monster.run(SKAction.sequence([moveAction, moveDoneAction])) // This will be for the MenuScene
         case SceneType.gameScene:
-            print("game")
-        default:
-            return
-        }
+            monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction])) // This will be for the GameScene
+            // Setup ip the category bitmask for the monster - This cannot be applied to the menu screen(it freaks out)
+            monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size)
+            monster.physicsBody?.isDynamic = true
+            monster.physicsBody?.categoryBitMask = PhysicsCategory.monster
+            monster.physicsBody?.contactTestBitMask = PhysicsCategory.projectile
+            monster.physicsBody?.collisionBitMask = PhysicsCategory.none
             
         }
+    }
+    
+    
+    func random() -> CGFloat {
+        return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
+    }
+    
+    func random(min: CGFloat, max: CGFloat) -> CGFloat {
+        return random() * (max - min) + min
+    }
+    
+//    func goToScene(newScene: SceneType) {
+//
+//        switch newScene {
+//        case SceneType.menuScene:
+//            print("menu")
+//        case SceneType.gameScene:
+//            print("game")
+//        }
+//
+//    }
     
     // This is how to setup the tile set programmaticlly
     func setupTileSet() {
