@@ -82,17 +82,6 @@ class SharredScene: SKScene {
         return random() * (max - min) + min
     }
     
-//    func goToScene(newScene: SceneType) {
-//
-//        switch newScene {
-//        case SceneType.menuScene:
-//            print("menu")
-//        case SceneType.gameScene:
-//            print("game")
-//        }
-//
-//    }
-    
     // This is how to setup the tile set programmaticlly
     func setupTileSet() {
         

@@ -96,6 +96,7 @@ class GameScene: SharredScene {
     //================
     // MARK: - Methods
     //================
+    
     // Creates a reatin cycle
     func createMonster() {
         addMonster(newScene: SceneType.gameScene)
