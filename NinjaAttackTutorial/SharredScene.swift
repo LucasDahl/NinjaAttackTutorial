@@ -19,13 +19,13 @@ class SharredScene: SKScene {
     //===================
     // MARK: - Properties
     //===================
-    let monster = SKSpriteNode(imageNamed: "monster")
+    public var test:Bool?
     
     //==============
     // MARK: Methods
     //==============
   
-    func addMonster(newScene: SceneType) {
+    func addMonster(/*newScene: SceneType*/) {
         
         // Create a monster Sprite
         let monster = SKSpriteNode(imageNamed: "monster")
@@ -56,12 +56,9 @@ class SharredScene: SKScene {
             self.view?.presentScene(gameOverScene, transition: reveal)
         }
 
-        // Find out which scene is the current scene
-        switch newScene {
-            
-        case SceneType.menuScene:
+        if test == true {
             monster.run(SKAction.sequence([moveAction, moveDoneAction])) // This will be for the MenuScene
-        case SceneType.gameScene:
+        } else {
             monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction])) // This will be for the GameScene
             // Setup ip the category bitmask for the monster - This cannot be applied to the menu screen(it freaks out)
             monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size)
@@ -71,6 +68,7 @@ class SharredScene: SKScene {
             monster.physicsBody?.collisionBitMask = PhysicsCategory.none
             
         }
+        
     }
     
     

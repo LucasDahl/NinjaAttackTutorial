@@ -46,9 +46,11 @@ class MenuScene: SharredScene, ButtonDelegate {
         label.position = CGPoint(x: size.width / 2, y: playButton.position.y + 50)
         addChild(label)
         // Will need to be refactored
-        run(SKAction.repeatForever(SKAction.sequence([SKAction.run(createMonster), SKAction.wait(forDuration: 1.0)])))
+        test = true
+        run(SKAction.repeatForever(SKAction.sequence([SKAction.run(addMonster), SKAction.wait(forDuration: 1.0)])))
         
     }
+    
     
     
     //================
@@ -58,7 +60,7 @@ class MenuScene: SharredScene, ButtonDelegate {
     //TODO: fix the retain cycele
     // Creates a reatin cycle
     func createMonster() {
-        addMonster(newScene: SceneType.menuScene)
+        //addMonster(newScene: SceneType.menuScene)
     }
 
     func buttonClicked(sender: Button) {
