@@ -74,11 +74,9 @@ class GameScene: SharredScene {
         scoreLabel.position = CGPoint(x: size.width / 12, y: size.height - 40)
         addChild(scoreLabel)
 
-        
-        
         // Add the player to the scene and label to the scene
         addChild(player)
-        test = false
+        SharredScene.test = false
         run(SKAction.repeatForever(SKAction.sequence([SKAction.run(addMonster), SKAction.wait(forDuration: 1.0)])))
         
         // Setup the physics - Needs to not have physics for this game

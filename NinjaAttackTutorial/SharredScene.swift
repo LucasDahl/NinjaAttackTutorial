@@ -19,7 +19,7 @@ class SharredScene: SKScene {
     //===================
     // MARK: - Properties
     //===================
-    public var test:Bool?
+    public static var test:Bool?
     
     //==============
     // MARK: Methods
@@ -56,7 +56,7 @@ class SharredScene: SKScene {
             self.view?.presentScene(gameOverScene, transition: reveal)
         }
 
-        if test == true {
+        if SharredScene.test == true {
             monster.run(SKAction.sequence([moveAction, moveDoneAction])) // This will be for the MenuScene
         } else {
             monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction])) // This will be for the GameScene

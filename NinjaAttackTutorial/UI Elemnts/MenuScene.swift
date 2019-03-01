@@ -46,7 +46,7 @@ class MenuScene: SharredScene, ButtonDelegate {
         label.position = CGPoint(x: size.width / 2, y: playButton.position.y + 50)
         addChild(label)
         // Will need to be refactored
-        test = true
+        SharredScene.test = true
         run(SKAction.repeatForever(SKAction.sequence([SKAction.run(addMonster), SKAction.wait(forDuration: 1.0)])))
         
     }
