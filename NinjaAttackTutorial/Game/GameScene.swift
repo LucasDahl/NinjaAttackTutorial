@@ -76,7 +76,6 @@ class GameScene: SharredScene {
 
         // Add the player to the scene and label to the scene
         addChild(player)
-        SharredScene.test = false
         run(SKAction.repeatForever(SKAction.sequence([SKAction.run(addMonster), SKAction.wait(forDuration: 1.0)])))
         
         // Setup the physics - Needs to not have physics for this game
@@ -172,6 +171,10 @@ class GameScene: SharredScene {
             
         }
         
+    }
+    
+    deinit {
+        print("Reclaming memory")
     }
   
 } // End class

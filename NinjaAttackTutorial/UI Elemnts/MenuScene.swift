@@ -46,7 +46,6 @@ class MenuScene: SharredScene, ButtonDelegate {
         label.position = CGPoint(x: size.width / 2, y: playButton.position.y + 50)
         addChild(label)
         // Will need to be refactored
-        SharredScene.test = true
         run(SKAction.repeatForever(SKAction.sequence([SKAction.run(addMonster), SKAction.wait(forDuration: 1.0)])))
         
     }
@@ -57,16 +56,13 @@ class MenuScene: SharredScene, ButtonDelegate {
     // MARK: - Methods
     //================
     
-    //TODO: fix the retain cycele
-    // Creates a reatin cycle
-    func createMonster() {
-        //addMonster(newScene: SceneType.menuScene)
-    }
-
     func buttonClicked(sender: Button) {
         
         // Setup the scene
         let scene = GameScene(size: view!.bounds.size)
+        
+        // Removes all nodes so there are no retain cycles.
+        safteyRemoveAllNodes()
         
         // Set the scene scale mode
         scene.scaleMode = .resizeFill
@@ -78,7 +74,7 @@ class MenuScene: SharredScene, ButtonDelegate {
     
     // Make sure theres no retains cycles.
     deinit {
-        print("Reclaming memory.")
+        print("Reclaming memory")
     }
     
 }

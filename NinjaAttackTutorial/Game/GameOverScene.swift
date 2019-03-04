@@ -125,4 +125,8 @@ class GameOverScene: SKScene, ButtonDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        print("Reclaming memory")
+    }
+    
 }
