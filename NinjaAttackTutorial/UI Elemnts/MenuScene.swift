@@ -48,13 +48,15 @@ class MenuScene: SharredScene, ButtonDelegate {
         run(SKAction.repeatForever(SKAction.sequence([SKAction.run(test), SKAction.wait(forDuration: 1.0)])))
         
     }
-    func test() {
-        addMonster(sceneTransition: SceneType.Menu)
-    }
     
     //================
     // MARK: - Methods
     //================
+    
+    // TODO: refactor to avoid usuing a method
+    func test() {
+        addMonster(sceneTransition: SceneType.Menu)
+    }
     
     func buttonClicked(sender: Button) {
         

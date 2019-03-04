@@ -92,6 +92,7 @@ class GameScene: SharredScene {
     //================
     // MARK: - Methods
     //================
+    // TODO: refactor to avoid usuing a method
     func test() {
         addMonster(sceneTransition: SceneType.Game)
     }
