@@ -19,6 +19,8 @@ class SharredScene: SKScene {
     //==============
 
     func addMonster() {
+        
+        // TODO: needs to be refactored due to a retain cycle
 
         // Create a monster Sprite
         let monster = SKSpriteNode(imageNamed: "monster")
@@ -35,11 +37,6 @@ class SharredScene: SKScene {
         // Determine the speed of the monster
         let actualDuration = random(min: CGFloat(2.0), max: CGFloat(4.0))
 
-        
-//        var moveActions = SKAction.run() { [weak self] in
-//            guard let `self` = self else { return }
-//
-//        }
         // Create the actions for the monster
         let moveAction = SKAction.move(to: CGPoint(x: -monster.size.width/2, y: actualY), duration: TimeInterval(actualDuration))
 
