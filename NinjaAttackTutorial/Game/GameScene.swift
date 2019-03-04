@@ -72,6 +72,7 @@ class GameScene: SharredScene {
         scoreLabel.fontColor = SKColor.black
         scoreLabel.fontSize = 20
         scoreLabel.position = CGPoint(x: size.width / 12, y: size.height - 40)
+        scoreLabel.zPosition = 10
         addChild(scoreLabel)
 
         // Add the player to the scene and label to the scene
