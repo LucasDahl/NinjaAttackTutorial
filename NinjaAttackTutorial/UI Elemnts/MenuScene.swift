@@ -44,6 +44,7 @@ class MenuScene: SharredScene, ButtonDelegate {
         label.fontColor = SKColor.black
         label.fontSize = 40
         label.position = CGPoint(x: size.width / 2, y: playButton.position.y + 50)
+        label.zPosition = 10
         addChild(label)
         run(SKAction.repeatForever(SKAction.sequence([SKAction.run(test), SKAction.wait(forDuration: 1.0)])))
         
