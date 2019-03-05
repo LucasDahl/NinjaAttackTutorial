@@ -17,10 +17,6 @@ enum SceneType: String {
 
 class SharredScene: SKScene {
     
-    //===================
-    // MARK: - Properties
-    //===================
-    
     //==============
     // MARK: Methods
     //==============
@@ -90,24 +86,13 @@ class SharredScene: SKScene {
         
     }
     
-    
-    
-    
-    
+    // This is for a saftey method to make sure there are no retain cycles
     func safteyRemoveAllNodes() {
         
         // Removes all nodes so there are no retain cycles.
         self.removeAllChildren()
         self.removeAllActions()
         
-    }
-    
-    func random() -> CGFloat {
-        return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
-    }
-    
-    func random(min: CGFloat, max: CGFloat) -> CGFloat {
-        return random() * (max - min) + min
     }
     
     // This is how to setup the tile set programmaticlly
@@ -150,5 +135,17 @@ class SharredScene: SKScene {
         
     }
     
-}
+    //===================
+    // MARK: Math helpers
+    //===================
+    
+    func random() -> CGFloat {
+        return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
+    }
+    
+    func random(min: CGFloat, max: CGFloat) -> CGFloat {
+        return random() * (max - min) + min
+    }
+    
+} // End class
 
