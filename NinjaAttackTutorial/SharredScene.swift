@@ -56,19 +56,6 @@ class SharredScene: SKScene {
             self.safteyRemoveAllNodes()
         }
         
-//        if SceneType == SceneType.Menu {
-//            monster.run(SKAction.sequence([moveAction, moveDoneAction])) // This will be for the MenuScene
-//        } else if SceneType == SceneType.Game {
-//            monster.run(SKAction.sequence([moveAction, loseAction, moveDoneAction])) // This will be for the GameScene
-//            // Setup ip the category bitmask for the monster - This cannot be applied to the menu screen(it freaks out)
-//            monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size)
-//            monster.physicsBody?.isDynamic = true
-//            monster.physicsBody?.categoryBitMask = PhysicsCategory.monster
-//            monster.physicsBody?.contactTestBitMask = PhysicsCategory.projectile
-//            monster.physicsBody?.collisionBitMask = PhysicsCategory.none
-//
-//        }
-        
         // Switch on the scene typ to call the correct actions
         switch sceneTransition {
             
