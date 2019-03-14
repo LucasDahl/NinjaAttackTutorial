@@ -68,6 +68,7 @@
 		952C8E9322160588003C2B57 /* UI Elemnts */ = {
 			isa = PBXGroup;
 			children = (
+				95CA3246221C520000AA5C53 /* SharredScene.swift */,
 				957736082215B91000978D86 /* MenuScene.swift */,
 				952C8E902215FE88003C2B57 /* Button.swift */,
 			);
@@ -101,11 +102,10 @@
 		957A7E1D22135AD8007D2DF2 /* NinjaAttackTutorial */ = {
 			isa = PBXGroup;
 			children = (
-				95CA3246221C520000AA5C53 /* SharredScene.swift */,
+				952C8E942216059F003C2B57 /* Helpers */,
 				952C8E9322160588003C2B57 /* UI Elemnts */,
 				952C8E9222160572003C2B57 /* Game */,
 				95BF0F1A223A95B100CFC8FC /* Physics */,
-				952C8E942216059F003C2B57 /* Helpers */,
 				95CA3245221C51A400AA5C53 /* Tile Sets */,
 				957A7E2822135AD8007D2DF2 /* Main.storyboard */,
 				957A7E3622135B48007D2DF2 /* Sounds */,
