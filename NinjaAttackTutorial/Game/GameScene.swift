@@ -77,7 +77,7 @@ class GameScene: SharredScene {
 
         // Add the player to the scene and label to the scene
         addChild(player)
-        run(SKAction.repeatForever(SKAction.sequence([SKAction.run(test), SKAction.wait(forDuration: 1.0)])))
+        run(SKAction.repeatForever(SKAction.sequence([SKAction.run(monsterSetup), SKAction.wait(forDuration: 1.0)])))
         
         // Setup the physics - Needs to not have physics for this game
         physicsWorld.gravity = .zero
@@ -93,8 +93,8 @@ class GameScene: SharredScene {
     //================
     // MARK: - Methods
     //================
-    // TODO: refactor to avoid usuing a method
-    func test() {
+    
+    func monsterSetup() {
         addMonster(sceneTransition: SceneType.Game)
     }
     
