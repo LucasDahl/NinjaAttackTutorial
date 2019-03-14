@@ -78,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				957A7E1E22135AD8007D2DF2 /* AppDelegate.swift */,
-				95E470DE2213CBC1003B5B57 /* PhysicsCategory.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -105,6 +104,7 @@
 				95CA3246221C520000AA5C53 /* SharredScene.swift */,
 				952C8E9322160588003C2B57 /* UI Elemnts */,
 				952C8E9222160572003C2B57 /* Game */,
+				95BF0F1A223A95B100CFC8FC /* Physics */,
 				952C8E942216059F003C2B57 /* Helpers */,
 				95CA3245221C51A400AA5C53 /* Tile Sets */,
 				957A7E2822135AD8007D2DF2 /* Main.storyboard */,
@@ -124,6 +124,14 @@
 				957A7E3822135B56007D2DF2 /* pew-pew-lei.caf */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		95BF0F1A223A95B100CFC8FC /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				95E470DE2213CBC1003B5B57 /* PhysicsCategory.swift */,
+			);
+			path = Physics;
 			sourceTree = "<group>";
 		};
 		95CA3245221C51A400AA5C53 /* Tile Sets */ = {

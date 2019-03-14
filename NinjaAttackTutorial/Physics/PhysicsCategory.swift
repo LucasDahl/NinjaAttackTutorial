@@ -16,4 +16,4 @@ struct PhysicsCategory {
     static let monster: UInt32 = 0b1
     static let projectile: UInt32 = 0b10
     
-}
+} // End class

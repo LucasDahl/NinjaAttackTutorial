@@ -49,4 +49,4 @@ class Button: SKSpriteNode {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         setScale(1.0)
     }
-}
+} // End class
