@@ -89,7 +89,7 @@ class SharredScene: SKScene {
     // This is for a saftey method to make sure there are no retain cycles
     func safteyRemoveAllNodes() {
         
-        // Removes all nodes so there are no retain cycles.
+        // Removes all nodes to ensure there are no retain cycles.
         self.removeAllChildren()
         self.removeAllActions()
         
