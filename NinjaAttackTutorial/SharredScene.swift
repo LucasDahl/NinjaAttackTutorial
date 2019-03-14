@@ -23,8 +23,6 @@ class SharredScene: SKScene {
     
     func addMonster(sceneTransition: SceneType) {
         
-        // TODO: needs to be refactored due to a retain cycle
-        
         // Create a monster Sprite
         let monster = SKSpriteNode(imageNamed: "monster")
         
@@ -41,7 +39,6 @@ class SharredScene: SKScene {
         let actualDuration = random(min: CGFloat(2.0), max: CGFloat(4.0))
         
         // Create the actions for the monster
-        // MARK: Will most likely need to make this a weak property to avoid retain cycles
         let moveAction = SKAction.move(to: CGPoint(x: -monster.size.width/2, y: actualY), duration: TimeInterval(actualDuration))
         
         // Create the action to remove the monster after it is off the screen
