@@ -59,19 +59,6 @@ class GameOverScene: SKScene, ButtonDelegate {
         addChild(labelMessage)
         
     }
-
-        // Run the action (this takes out the ability to get to the main menu)
-//        run(SKAction.sequence([
-//            SKAction.wait(forDuration: 3.0),
-//            SKAction.run() { [weak self] in
-//
-//                // transition to a new scene to reveal the message
-//                guard let `self` = self else { return }
-//                let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
-//                let scene = GameScene(size: size)
-//                self.view?.presentScene(scene, transition:reveal)
-//            }
-//            ]))
     
     //================
     // MARK: - Methods
@@ -84,7 +71,7 @@ class GameOverScene: SKScene, ButtonDelegate {
         
         // Switch on the button name to determine the right scene to assign to the variable
         switch scene {
-        //TODO: - Make a enum to switch on
+            
         case "playButton":
             sceneToPlay = GameScene(size: view!.bounds.size)
         case "menuButton":
