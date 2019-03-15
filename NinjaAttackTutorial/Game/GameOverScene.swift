@@ -16,9 +16,6 @@ class GameOverScene: SKScene, ButtonDelegate {
     init(size: CGSize, won: Bool) {
         super.init(size: size)
         
-        // Set the background color
-        backgroundColor = SKColor.white
-        
         // Create the message
         let message = won ? "You Won!" : "You Lose :("
         
@@ -57,6 +54,13 @@ class GameOverScene: SKScene, ButtonDelegate {
         labelMessage.fontSize = 40
         labelMessage.position = CGPoint(x: size.width / 2, y: playButton.position.y + 50)
         addChild(labelMessage)
+        
+        // Set the background color
+        if message == "You Won!" {
+            backgroundColor = SKColor.green
+        } else if message == "You Lose :(" {
+            backgroundColor = SKColor.red
+        }
         
     }
     
