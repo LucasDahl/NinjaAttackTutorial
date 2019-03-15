@@ -195,7 +195,7 @@ extension GameScene: SKPhysicsContactDelegate {
         var firstBody: SKPhysicsBody
         var secondBody: SKPhysicsBody
         
-        // This is for testing collisions and since they are not passed in any particular order they need to be sorted
+        // This is for testing collisions and since they are not passed in any particular order they need to be sorted and check for both possible outcomes
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
             firstBody = contact.bodyA
             secondBody = contact.bodyB
