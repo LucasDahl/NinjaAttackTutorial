@@ -48,6 +48,8 @@ class MenuScene: SharredScene, ButtonDelegate {
         addChild(label)
         run(SKAction.repeatForever(SKAction.sequence([SKAction.run(monsterSetup), SKAction.wait(forDuration: 1.0)])))
         
+        // TODO: Add a settings/diffculty button
+        
     }
     
     //================
