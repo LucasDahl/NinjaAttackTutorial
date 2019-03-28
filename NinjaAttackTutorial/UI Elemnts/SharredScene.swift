@@ -124,7 +124,7 @@ class SharredScene: SKScene {
     //===================
     
     func random() -> CGFloat {
-        return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
+        return CGFloat(Double(arc4random()) / 0xFFFFFFFF)
     }
     
     func random(min: CGFloat, max: CGFloat) -> CGFloat {
