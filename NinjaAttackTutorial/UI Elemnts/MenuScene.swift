@@ -49,6 +49,12 @@ class MenuScene: SharredScene, ButtonDelegate {
         run(SKAction.repeatForever(SKAction.sequence([SKAction.run(monsterSetup), SKAction.wait(forDuration: 1.0)])))
         
         // TODO: Add a settings/diffculty button
+        // Difficulty button
+        let diffButton = Button(imageNamed: "")
+        diffButton.name = "button3"
+        diffButton.position = CGPoint(x: size.width, y: size.height)
+        diffButton.delegate = self
+        addChild(diffButton)
         
     }
     
