@@ -34,7 +34,7 @@ class MenuScene: SharredScene, ButtonDelegate {
         // Setup the button
         let playButton = Button(imageNamed: "play")
         playButton.name = "button2"
-        playButton.position = CGPoint(x: size.width / 2, y: size.height / 2)
+        playButton.position = CGPoint(x: (size.width / 2) - 30, y: size.height / 2)
         playButton.delegate = self
         addChild(playButton)
         
@@ -50,9 +50,9 @@ class MenuScene: SharredScene, ButtonDelegate {
         
         // TODO: Add a settings/diffculty button
         // Difficulty button
-        let diffButton = Button(imageNamed: "")
+        let diffButton = Button(imageNamed: "diff")
         diffButton.name = "button3"
-        diffButton.position = CGPoint(x: size.width, y: size.height)
+        diffButton.position = CGPoint(x: (size.width / 2) + 30, y: size.height / 2)
         diffButton.delegate = self
         addChild(diffButton)
         
