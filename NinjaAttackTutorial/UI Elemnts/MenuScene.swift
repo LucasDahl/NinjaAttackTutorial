@@ -86,7 +86,7 @@ class MenuScene: SharredScene, ButtonDelegate {
     
     // Make sure theres no retains cycles.
     deinit {
-        print("Reclaming memory!")
+        print("Reclaming memory")
     }
     
 }// End class
