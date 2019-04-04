@@ -65,7 +65,7 @@ class MenuScene: SharredScene, ButtonDelegate {
         addMonster(sceneTransition: SceneType.Menu)
     }
     
-    // TODO: Add a way to switch between scenes based on what button was pressed.
+    // TODO: Add a way to switch between scenes based on what button was pressed
     func buttonClicked(sender: Button) {
         
         // Setup the scene
