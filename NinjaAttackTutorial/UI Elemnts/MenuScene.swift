@@ -48,7 +48,6 @@ class MenuScene: SharredScene, ButtonDelegate {
         addChild(label)
         run(SKAction.repeatForever(SKAction.sequence([SKAction.run(monsterSetup), SKAction.wait(forDuration: 1.0)])))
         
-        // TODO: Add a settings/diffculty button
         // Difficulty button
         let diffButton = Button(imageNamed: "diff")
         diffButton.name = "button3"
@@ -66,6 +65,7 @@ class MenuScene: SharredScene, ButtonDelegate {
         addMonster(sceneTransition: SceneType.Menu)
     }
     
+    // TODO: Add a way to switch between scenes based on what button was pressed.
     func buttonClicked(sender: Button) {
         
         // Setup the scene
@@ -79,6 +79,8 @@ class MenuScene: SharredScene, ButtonDelegate {
         
         // Present the scene
         self.view!.presentScene(scene)
+        
+        
         
     }
     
