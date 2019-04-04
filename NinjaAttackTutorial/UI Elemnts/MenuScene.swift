@@ -57,9 +57,9 @@ class MenuScene: SharredScene, ButtonDelegate {
         
     }
     
-    //================
+    //=================
     // MARK: - Methods
-    //================
+    //=================
     
     func monsterSetup() {
         addMonster(sceneTransition: SceneType.Menu)
