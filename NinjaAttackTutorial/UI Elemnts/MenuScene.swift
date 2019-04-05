@@ -43,7 +43,7 @@ class MenuScene: SharredScene, ButtonDelegate {
         settingsButton.name = "settingsButton"
         settingsButton.position = CGPoint(x: (size.width / 2) + 30, y: size.height / 2)
         settingsButton.delegate = self
-        addChild(diffButton)
+        addChild(settingsButton)
         
         // Setup the label
         let label = SKLabelNode(fontNamed: "Chalkduster")
