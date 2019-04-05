@@ -20,6 +20,7 @@
 		957A7E2F22135AD9007D2DF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 957A7E2D22135AD9007D2DF2 /* LaunchScreen.storyboard */; };
 		957A7E3922135B56007D2DF2 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 957A7E3722135B56007D2DF2 /* background-music-aac.caf */; };
 		957A7E3A22135B56007D2DF2 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 957A7E3822135B56007D2DF2 /* pew-pew-lei.caf */; };
+		959FBAFC2257E0C3000D86AA /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959FBAFB2257E0C3000D86AA /* SettingsScene.swift */; };
 		95CA3247221C520000AA5C53 /* SharredScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CA3246221C520000AA5C53 /* SharredScene.swift */; };
 		95E470DF2213CBC1003B5B57 /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E470DE2213CBC1003B5B57 /* PhysicsCategory.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		957A7E3022135AD9007D2DF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		957A7E3722135B56007D2DF2 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
 		957A7E3822135B56007D2DF2 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		959FBAFB2257E0C3000D86AA /* SettingsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
 		95CA3246221C520000AA5C53 /* SharredScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharredScene.swift; sourceTree = "<group>"; };
 		95E470DE2213CBC1003B5B57 /* PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +73,7 @@
 				95CA3246221C520000AA5C53 /* SharredScene.swift */,
 				957736082215B91000978D86 /* MenuScene.swift */,
 				952C8E902215FE88003C2B57 /* Button.swift */,
+				959FBAFB2257E0C3000D86AA /* SettingsScene.swift */,
 			);
 			path = "UI Elemnts";
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				95E470DF2213CBC1003B5B57 /* PhysicsCategory.swift in Sources */,
 				95CA3247221C520000AA5C53 /* SharredScene.swift in Sources */,
 				957736092215B91000978D86 /* MenuScene.swift in Sources */,
+				959FBAFC2257E0C3000D86AA /* SettingsScene.swift in Sources */,
 				957A7E2722135AD8007D2DF2 /* GameViewController.swift in Sources */,
 				957A7E1F22135AD8007D2DF2 /* AppDelegate.swift in Sources */,
 			);

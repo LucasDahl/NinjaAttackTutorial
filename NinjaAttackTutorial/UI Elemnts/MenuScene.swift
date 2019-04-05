@@ -39,10 +39,10 @@ class MenuScene: SharredScene, ButtonDelegate {
         addChild(playButton)
         
         // Difficulty button
-        let diffButton = Button(imageNamed: "diff")
-        diffButton.name = "diffButton"
-        diffButton.position = CGPoint(x: (size.width / 2) + 30, y: size.height / 2)
-        diffButton.delegate = self
+        let settingsButton = Button(imageNamed: "diff")
+        settingsButton.name = "settingsButton"
+        settingsButton.position = CGPoint(x: (size.width / 2) + 30, y: size.height / 2)
+        settingsButton.delegate = self
         addChild(diffButton)
         
         // Setup the label
@@ -74,11 +74,13 @@ class MenuScene: SharredScene, ButtonDelegate {
             let scene = GameScene(size: view!.bounds.size)
             sceneToCall(scene: scene)
             
-        } else if sender.name == "diffButton" {
-            print("diffButton")
+        } else if sender.name == "settingsButton" {
+            
+            // Initzialized the scene
+//            let scene =
+//            sceneToCall(scene: scene)
+            
         }
-        
-        
         
     }
     
