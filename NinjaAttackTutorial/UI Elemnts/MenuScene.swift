@@ -77,8 +77,8 @@ class MenuScene: SharredScene, ButtonDelegate {
         } else if sender.name == "settingsButton" {
             
             // Initzialized the scene
-//            let scene =
-//            sceneToCall(scene: scene)
+            let scene = SettingsScene(size: view!.bounds.size)
+            sceneToCall(scene: scene)
             
         }
         
