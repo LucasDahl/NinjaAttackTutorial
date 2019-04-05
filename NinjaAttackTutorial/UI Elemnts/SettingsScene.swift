@@ -19,4 +19,8 @@ class SettingsScene: SharredScene {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        print("reclaiming memory")
+    }
+    
 }
