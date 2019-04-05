@@ -65,11 +65,24 @@ class MenuScene: SharredScene, ButtonDelegate {
         addMonster(sceneTransition: SceneType.Menu)
     }
     
-    // TODO: Add a way to switch between scenes based on what button was pressed
     func buttonClicked(sender: Button) {
         
         // Setup the scene
-        let scene = GameScene(size: view!.bounds.size)
+        if sender.name == "playButton" {
+            
+            // Initzialize the scene
+            let scene = GameScene(size: view!.bounds.size)
+            sceneToCall(scene: scene)
+            
+        } else if sender.name == "diffButton" {
+            print("diffButton")
+        }
+        
+        
+        
+    }
+    
+    func sceneToCall(scene: SKScene) {
         
         // Removes all nodes so there are no retain cycles.
         safteyRemoveAllNodes()
@@ -79,9 +92,6 @@ class MenuScene: SharredScene, ButtonDelegate {
         
         // Present the scene
         self.view!.presentScene(scene)
-        print(sender.name)
-        
-        
     }
     
     // Make sure theres no retains cycles.
