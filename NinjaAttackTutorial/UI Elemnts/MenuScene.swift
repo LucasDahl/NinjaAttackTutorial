@@ -38,6 +38,13 @@ class MenuScene: SharredScene, ButtonDelegate {
         playButton.delegate = self
         addChild(playButton)
         
+        // Difficulty button
+        let diffButton = Button(imageNamed: "diff")
+        diffButton.name = "diffButton"
+        diffButton.position = CGPoint(x: (size.width / 2) + 30, y: size.height / 2)
+        diffButton.delegate = self
+        addChild(diffButton)
+        
         // Setup the label
         let label = SKLabelNode(fontNamed: "Chalkduster")
         label.text = "Play Ninja Rush?"
@@ -47,13 +54,6 @@ class MenuScene: SharredScene, ButtonDelegate {
         label.zPosition = 10
         addChild(label)
         run(SKAction.repeatForever(SKAction.sequence([SKAction.run(monsterSetup), SKAction.wait(forDuration: 1.0)])))
-        
-        // Difficulty button
-        let diffButton = Button(imageNamed: "diff")
-        diffButton.name = "diffButton"
-        diffButton.position = CGPoint(x: (size.width / 2) + 30, y: size.height / 2)
-        diffButton.delegate = self
-        addChild(diffButton)
         
     }
     
